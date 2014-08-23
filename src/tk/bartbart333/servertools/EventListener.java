@@ -7,8 +7,14 @@ import org.bukkit.event.player.PlayerJoinEvent;
 
 public class EventListener implements Listener{
 	
+	private ServerTools servertools;
+	
+	public EventListener(ServerTools servertools) {
+		this.servertools = servertools;
+	}
+
 	@EventHandler(priority = EventPriority.MONITOR)
 	public void onJoin(PlayerJoinEvent event){
-		
+		servertools.players.add(new EPlayer(event.getPlayer()));
 	}
 }
