@@ -13,7 +13,7 @@ public class EventListener implements Listener{
 		this.servertools = servertools;
 	}
 
-	@EventHandler(priority = EventPriority.MONITOR)
+	@EventHandler(priority = EventPriority.MONITOR, ignoreCancelled = true)
 	public void onJoin(PlayerJoinEvent event){
 		servertools.players.add(new EPlayer(event.getPlayer()));
 	}
