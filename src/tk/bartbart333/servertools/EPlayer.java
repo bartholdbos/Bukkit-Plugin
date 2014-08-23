@@ -1,23 +1,21 @@
 package tk.bartbart333.servertools;
 
 import org.bukkit.entity.Player;
-import org.bukkit.event.HandlerList;
-import org.bukkit.event.player.PlayerEvent;
 
-public class EPlayer extends PlayerEvent{
+public class EPlayer{
 	
+	private Player player;
 	private boolean loggedin = false;
 	
 	public EPlayer(Player player) {
-		super(player);
+		this.player = player;
 	}
 	
 	public boolean getLoggedin(){
 		return loggedin;
 	}
 	
-	@Override
-	public HandlerList getHandlers() {
-		return null;
+	public Player getPlayer(){
+		return player;
 	}
 }
