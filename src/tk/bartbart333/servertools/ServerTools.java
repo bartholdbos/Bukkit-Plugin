@@ -1,6 +1,5 @@
 package tk.bartbart333.servertools;
 
-import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import tk.bartbart333.config.Config;
