@@ -15,6 +15,6 @@ public class EventListener implements Listener{
 
 	@EventHandler(priority = EventPriority.MONITOR, ignoreCancelled = true)
 	public void onJoin(PlayerJoinEvent event){
-		servertools.players.put(new EPlayer(event.getPlayer()), event.getPlayer().getName());
+		servertools.players.put(event.getPlayer().getName(), new EPlayer(event.getPlayer()));
 	}
 }
