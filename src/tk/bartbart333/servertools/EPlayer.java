@@ -6,7 +6,7 @@ import org.bukkit.event.player.PlayerEvent;
 
 public class EPlayer extends PlayerEvent{
 	
-	private boolean loggedin = true;
+	private boolean loggedin = false;
 	
 	public EPlayer(Player player) {
 		super(player);
