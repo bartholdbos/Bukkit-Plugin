@@ -10,7 +10,7 @@ public class ServerTools extends JavaPlugin{
 	private Config config = new Config(getDataFolder() + "/ServerTools");
 		
 	public void onEnable(){
-		
+		getServer().getPluginManager().registerEvents(new EventListener(), this);
 		
 		config.load();
 		config.store();
